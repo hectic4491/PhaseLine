@@ -1,7 +1,5 @@
 # Development notes for PhaseLine
 
----
-
 ## 2025-06-13  20:00:00
 ### Software Requirements for PhaseLine:
 #### PhaseLine
@@ -95,7 +93,7 @@ General form of a sinusoidal function:
 > y = A sin (B(x-C)) + D
 
 | Variable |     Description 	  |
-| ---      |    ----            |
+|   ---    |        ----        |
 | A        | Amplitude          |
 | B        | Period 2π/B        |
 | C        | Phase Shift (in x) |
