@@ -5,14 +5,15 @@ sine, square, and triangle.
 """
 
 from typing import Tuple
+
 import numpy as np
 from numpy.typing import NDArray
 
 TWO_PI = 2 * np.pi
 
+
 def generate_time_array(
-    duration: float = 1.0,
-    sampling_rate: int = 1000
+    duration: float = 1.0, sampling_rate: int = 1000
 ) -> NDArray[np.float64]:
     """Generate a 1D array of time samples.
 
@@ -26,10 +27,7 @@ def generate_time_array(
         A NumPy array of time values.
     """
     return np.linspace(
-        start = 0,
-        stop = duration,
-        num = int(duration * sampling_rate),
-        endpoint = False
+        start=0, stop=duration, num=int(duration * sampling_rate), endpoint=False
     )
 
 
@@ -37,7 +35,7 @@ def sine_wave(
     freq: float = 5.0,
     amplitude: float = 1.0,
     duration: float = 1.0,
-    sampling_rate: int = 1000
+    sampling_rate: int = 1000,
 ) -> Tuple[NDArray[np.float64], NDArray[np.float64]]:
     """Generate a sine wave signal.
 
@@ -60,7 +58,7 @@ def square_wave(
     freq: float = 5.0,
     amplitude: float = 1.0,
     duration: float = 1.0,
-    sampling_rate: int = 1000
+    sampling_rate: int = 1000,
 ) -> Tuple[NDArray[np.float64], NDArray[np.float64]]:
     """Generate a square wave signal.
 
@@ -83,17 +81,17 @@ def triangle_wave(
     freq: float = 5.0,
     amplitude: float = 1.0,
     duration: float = 1.0,
-    sampling_rate: int = 1000
+    sampling_rate: int = 1000,
 ) -> Tuple[NDArray[np.float64], NDArray[np.float64]]:
     """Generate a triangle wave signal.
 
     Args:
-    
+
         freq: Frequency of the wave in Hz.
         amplitude: Peak amplitude.
         duration: Length of time the signal spans.
         sampling_rate: Number of samples per second.
-        
+
     Returns:
 
         Tuple containing time and amplitude arrays.
