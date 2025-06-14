@@ -1,5 +1,5 @@
-# List of Python dependenciest
+# requirements.txt
+# List of runtime dependencies.
 numpy
 matplotlib
 scipy
-pytest

@@ -1,0 +1,10 @@
+# requirements-dev.txt
+# List of development dependencies.
+# Packaging tool:
+setuptools
+# Formatting and linting tools:
+black
+isort
+pylint
+# Testing framework:
+pytest
