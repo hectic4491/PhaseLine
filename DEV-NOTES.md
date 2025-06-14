@@ -1,5 +1,7 @@
 # Development notes for PhaseLine
-	---
+
+---
+
 ## 2025-06-13  20:00:00
 ### Software Requirements for PhaseLine:
 #### PhaseLine
@@ -35,9 +37,9 @@
 
 
 #### Documentation
--README with waveform demos, screenshots, and short video demos (GIFs or YouTube).
--Walkthrough of how you used mathematical concepts for spectral analysis and signal decomposition.
--Notes on how this mimics hardware signal testing in embedded systems.
+- README with waveform demos, screenshots, and short video demos (GIFs or YouTube).
+- Walkthrough of how you used mathematical concepts for spectral analysis and signal decomposition.
+- Notes on how this mimics hardware signal testing in embedded systems.
 
 ---
 
@@ -52,8 +54,10 @@ venv created; the interpreter, pip and necessary dependencies are local.
 
 create and activate venv:
 #### Bash
-> python3 -m venv venv
-> source venv/bin/activate
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
 
 Project source code in phaseline/ directory, tests will be implemented in tests/ directory.
@@ -64,8 +68,9 @@ requirements.txt gives us the list of runtime necessary project dependencies:
 - matplotlib
 - scipy
 #### Bash
-> pip install -r requirements.txt
-
+```
+pip install -r requirements.txt
+```
 
 requirements-dev.txt gives us the list of development project dependencies.
 - setuptools
@@ -74,12 +79,24 @@ requirements-dev.txt gives us the list of development project dependencies.
 - pylint
 - pytest
  #### Bash
-> pip install -r requirements-dev.txt
+```
+pip install -r requirements-dev.txt
+```
 
 ---
 
 ## 2025-06-13  21:30:00
 ### Development Notes - Rob
-signal_generator.py
+signal_generator.py is the core digitial synthesis engine for PHaseline.
+This is the computational layer that produces time-based, periodic signals for visualization, FTT transformation, or audio synthesis later on.
 
-...Write what I made...
+General form of a sinusoidal function:
+
+> y = A sin (B(x-C)) + D
+
+| Variable |     Description 	  |
+| ---      |    ----            |
+| A        | Amplitude          |
+| B        | Period 2π/B        |
+| C        | Phase Shift (in x) |
+| D   	   | Vertical Shift     |
