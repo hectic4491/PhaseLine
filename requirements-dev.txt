@@ -2,9 +2,12 @@
 # List of development dependencies.
 # Packaging tool:
 setuptools
-# Formatting and linting tools:
+# Formatting:
 black
 isort
+# Linting tools:
 pylint
+# Static type checking:
+mypy
 # Testing framework:
 pytest
